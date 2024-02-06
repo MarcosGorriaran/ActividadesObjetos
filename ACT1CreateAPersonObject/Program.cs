@@ -6,7 +6,8 @@ namespace ACT1
     {
         public static void Main()
         {
-            Console.WriteLine(new Person("Someone","NotCool",1.75f));
+            Person someone = new Person("Someone","SomeSurname",1.78f);
+            Console.WriteLine(someone.GetName()+" "+someone.GetSurname()+" "+someone.GetHeight());
         }
     }
 }

@@ -7,9 +7,9 @@
         private float height;
         public Person(string name, string surname, float height)
         {
-            SetName(name);
-            SetHeight(height);
-            SetSurname(surname);
+            this.SetName(name);
+            this.SetSurname(surname);
+            this.SetHeight(height);
         }
 
         public string GetName() { return this.name; }
@@ -17,10 +17,6 @@
         public float GetHeight() { return this.height; }
         public void SetName(string name) {this.name = name;}
         public void SetSurname(string surname) {this.surname = surname;}
-        public void SetHeight(float height) {this.height = height;}
-        public override string ToString()
-        {
-            return this.name+" "+this.surname+"\n"+this.height;
-        }
+        public void SetHeight(float height) { this.height = height; }
     }
 }
