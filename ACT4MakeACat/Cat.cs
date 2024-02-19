@@ -5,6 +5,7 @@ namespace ACT4MakeACat
     public class Cat
     {
         public static readonly string[] Breeds = {"breed1","breed2"};
+        private const string CatSound = "meow";
         private string name;
         private string breed;
         private string favFood;
@@ -44,7 +45,7 @@ namespace ACT4MakeACat
         }
         public int Age
         {
-            get { return this.Age; }
+            get { return this.age; }
             set { this.age = value; }
         }
 
@@ -55,6 +56,27 @@ namespace ACT4MakeACat
                 if (Breeds[i] == breed.ToLower()) return true;
             }
             return false;
+        }
+
+        public string MakeMeowSound()
+        {
+            return Cat.CatSound;
+        }
+        public string Play()
+        {
+            return $"{this.Name} the cat is having fun playing with you";
+        }
+        public string Wash()
+        {
+            return $"{this.Name} the cat dislikes being washed but sacrifaces must be done for his own health";
+        }
+        public string Eat(string food)
+        {
+            return food.Equals(this.favFood) ? $"{this.Name} the cat loves the fact that you provided him his favourite food":$"{this.Name} enjoys his meal";
+        }
+        public string Hunt()
+        {
+            return $"{this.Name} the cat brings a rat that it hunted, how adorable and probably disgusting";
         }
     }
 }

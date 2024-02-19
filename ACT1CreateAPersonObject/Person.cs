@@ -18,5 +18,10 @@
         public void SetName(string name) {this.name = name;}
         public void SetSurname(string surname) {this.surname = surname;}
         public void SetHeight(float height) { this.height = height; }
+
+        public override string ToString()
+        {
+            return $"{this.GetName()} {this.GetSurname()} - {this.GetHeight()}";
+        }
     }
 }
